@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	counter "./counter"
+	counter "github.com/fitg/golang-kata-wordcount-docker/counter"
 )
 
 func main() {
