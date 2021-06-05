@@ -1,16 +1,21 @@
 format:
-	go fmt ./counter
-	go fmt main.go
+	go fmt ./...
 
 lint:
-	golint ./counter
-	go fmt main.go
+	golint ./...
 
 vet:
-	go vet ./counter
-	go fmt main.go
+	go vet ./...
+
+build:
+	docker build . -t golang-kata-wordcount-docker
 
 unit-test:
-	go test -v ./counter
+	docker run --name tester golang-kata-wordcount-docker sh -c "cd ./counter && go test -v ./..."
+	docker rm tester
 
-all: format lint vet unit-test
+run:
+	docker run --name runner golang-kata-wordcount-docker sh -c "./main"
+	docker rm runner
+
+all: format lint vet build unit-test run

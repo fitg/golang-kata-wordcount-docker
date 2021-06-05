@@ -7,7 +7,10 @@ The intent is less on the algorithm, but to show various stages of the
 pipeline process. From formatting, linting, building a docker image,
 to running unit tests to verify the library is working ok.
 
+Also dealing with some proper input strings naughtiness.
+
 The code was written following: https://github.com/uber-go/guide/blob/master/style.md.
+Note some of the test cases were taken from: https://github.com/minimaxir/big-list-of-naughty-strings/blob/master/blns.txt.
 
 ## Prerequisites
 

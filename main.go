@@ -7,5 +7,6 @@ import (
 )
 
 func main() {
+	// test out if the method works
 	fmt.Println(counter.WordCount("foo bar"))
 }

@@ -5,8 +5,10 @@ import (
 )
 
 // WordCount is a function counting number of words in a sentence
+// it uses ASCII whitespace (0x20) to separate words
+// https://en.wikipedia.org/wiki/Whitespace_character
 // example WordCount("foo bar") would return
-// foo: 1, bar: 1
+// map[bar:1 foo:1]
 func WordCount(sentence string) map[string]int {
 	wordCount := make(map[string]int)
 
