@@ -1,11 +1,16 @@
 format:
 	go fmt ./...
+	cd counter
+	go fmt
 
 lint:
 	golint ./...
+	golint ./counter
 
 vet:
 	go vet ./...
+	cd counter
+	go vet
 
 build:
 	docker build . -t golang-kata-wordcount-docker
